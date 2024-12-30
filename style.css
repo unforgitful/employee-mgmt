@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.em-container {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
+    min-width: 180px;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
