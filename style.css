@@ -4,14 +4,22 @@
     box-sizing: border-box;
 }
 
+header {
+    top: 0;
+    height: auto;
+    /* background-color: rgb(161, 161, 255); */
+    z-index: 1000px;
+}
+
 h1 {
     text-align: center;
-    margin: 2rem;
+    padding: 2vh;
 }
 
 .em-container {
     width: 60%;
     margin: 0 auto;
+    padding-top: 2vh;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -35,4 +43,10 @@ th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
 th {
     background-color: #f1f1f1;
     font-weight: bold;
+}
+
+.delete-button {
+    padding: 3px;
+    color: white;
+    background-color: rgb(181, 17, 17);
 }

@@ -33,7 +33,8 @@ document.getElementById("addEmployeeBtn").addEventListener("click",function(){
 
         const optionCell = document.createElement("td");
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
+        deleteButton.innerHTML = '<i class="fa fa-trash">Delete</i>';
+        // deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete-button");
         deleteButton.addEventListener("click", function() {
             deleteEmployee(newRow);
