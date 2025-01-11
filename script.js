@@ -1,7 +1,14 @@
 document.getElementById("addEmployeeBtn").addEventListener("click",function(){
     const employeeName = prompt("Enter Employee Name");
     if (employeeName) {
-        const clients = ['First Department', 'Second Department', 'Third Department', 'Fourth Department'];
+        const roles = ['HR Staff', 'IT Staff', 'Network Staff', 'Security Staff'];
+        let roleDropdown = '<select>';
+        roles.forEach(role => {
+            roleDropdown += `<option value="${role}">${role}</option>`;
+        })
+        roleDropdown += '</select>';
+
+        const clients = ['Client A', 'Client B', 'Client E', 'Client D'];
         let clientDropdown = '<select>';
         clients.forEach(client => {
             clientDropdown += `<option value="${client}">${client}</option>`;
@@ -9,13 +16,16 @@ document.getElementById("addEmployeeBtn").addEventListener("click",function(){
         });
 
         clientDropdown += '</select>';
-
+        
         const tableBody = document.getElementById("employeeTable");
 
         const newRow = document.createElement("tr");
 
         const nameCell = document.createElement("td");
         nameCell.textContent = employeeName;
+
+        const roleCell = document.createElement("td");
+        roleCell.innerHTML = roleDropdown;
 
         const clientCell = document.createElement("td");
         clientCell.innerHTML = clientDropdown;
@@ -43,6 +53,7 @@ document.getElementById("addEmployeeBtn").addEventListener("click",function(){
         optionCell.appendChild(deleteButton);
 
         newRow.appendChild(nameCell);
+        newRow.appendChild(roleCell);
         newRow.appendChild(clientCell);
         newRow.appendChild(statusCell);
         newRow.appendChild(optionCell);

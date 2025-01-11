@@ -7,26 +7,48 @@
 header {
     top: 0;
     height: auto;
-    /* background-color: rgb(161, 161, 255); */
+    background-color: rgb(0, 0, 225);
+    padding: 2vh;
+    margin-bottom: 2vh;
     z-index: 1000px;
 }
 
 h1 {
     text-align: center;
     padding: 2vh;
+    color: white;
+}
+
+.myBtn {
+    text-align: center;
+}
+
+.myBtn .addButton {
+    padding: 12px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: rgb(175, 175, 175);
 }
 
 .em-container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 2vh;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
+}
+
+#employeeTable {
+    width: 100%;
 }
 
 th,
@@ -36,7 +58,7 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2) {
+th:nth-child(1), td:nth-child(1),th:nth-child(2), td:nth-child(2), td:nth-child(3), th:nth-child(3) {
     min-width: 180px;
 }
 
@@ -45,8 +67,23 @@ th {
     font-weight: bold;
 }
 
+.active {
+    background-color: rgb(12, 255, 12);
+    padding: 3px;
+    border-radius: 6px;
+    color: white;
+}
+
+.inactive{
+    background-color: rgb(181, 17, 17);
+    padding: 3px;
+    border-radius: 6px;
+    color: white;
+}
+
 .delete-button {
     padding: 3px;
     color: white;
+    border-radius: 6px;
     background-color: rgb(181, 17, 17);
 }
