@@ -8,7 +8,7 @@ document.getElementById("addEmployeeBtn").addEventListener("click",function(){
         })
         roleDropdown += '</select>';
 
-        const clients = ['Client A', 'Client B', 'Client E', 'Client D'];
+        const clients = ['Client A', 'Client B', 'Client C', 'Client D'];
         let clientDropdown = '<select>';
         clients.forEach(client => {
             clientDropdown += `<option value="${client}">${client}</option>`;
@@ -74,6 +74,7 @@ function toggleStatus(button) {
         button.textContent = "Active";
     }
 }
+
 
 function deleteEmployee(row) {
     if (confirm("Are you sure you want to delete this employee?")){
